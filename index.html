@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>biker-zone-with-daisyui</title>
     <!-- tailwind and daisy UI -->
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,700&display=swap"
+        rel="stylesheet">
 
     <!-- tailwind custom classes -->
 
@@ -20,7 +23,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                        'bike-primary': '#E76F51',
+                        'bikeprimary': '#E76F51',
                         'bike-primary-bg': 'rgba(231, 111, 81, 0.10)',
                     }
                 }
@@ -38,9 +41,10 @@
 <body class="font-poppin">
     <header class="md:container md:mx-auto">
         <!-- navbar -->
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <div class="navbar-start">
+        <nav>
+            <div class="navbar  bg-base-100">
+                <div class="flex-1 ">
+
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -60,7 +64,7 @@
                     <a class="btn btn-ghost normal-case text-4xl">Biker Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal text-base px-1">
+                    <ul class="menu text-base menu-horizontal px-1">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
                         <li><a>News</a></li>
@@ -68,49 +72,57 @@
                     </ul>
                 </div>
                 <div class="">
-                    <a class="btn btn-primary bike-primary text-white">Login</a>
+                    <a class="btn  bg-bikeprimary text-white">Login</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- carousel  -->
+        <div class="carousel w-full h-[550px] bg-bike-primary-bg">
+            <!-- silde 1 -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="flex gap-20 p-24">
+                    <div class="space-y-7 flex-1">
+                        <h2 class="text-6xl font-bold">Ride-on R15 V4 <br>with Smile</h2>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <button class="btn bg-bikeprimary text-white">Purchase</button>
+                    </div>
+                    <div class="w-[400px]">
+                        <img src="/images/slider/bike1.png" alt="" class="w-full">
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slide 2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="/images/slider/bike2.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- silde 3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="/images/slider/bike3.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- silde 4 -->
+            <div id="slide4" class="carousel-item relative w-full">
+                <img src="/images/slider/bike4.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
                 </div>
             </div>
         </div>
-
-        <!-- carousel  -->
-        <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full">
-              <div c>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-              </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide2" class="carousel-item relative w-full">
-              <img src="/images/slider/bike2.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide3" class="carousel-item relative w-full">
-              <img src="/images/slider/bike3.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            <div id="slide4" class="carousel-item relative w-full">
-              <img src="/images/slider/bike4.png" class="w-full" />
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-            </div>
-          </div>
     </header>
 
 
